@@ -137,7 +137,7 @@ var simplify = function simplify(url) {
 var render = function render() {
   $("li:not(.last)").remove();
   hashMap.forEach(function (node, index) {
-    var $li = $("\n        <li>     \n            <div class=\"site\">\n                <div class=\"logo\">\n                ".concat(node.logo, "\n                </div>\n                <div class=\"link\">").concat(simplify(node.url), "</div>\n                <div class=\"close\">\n                    <svg class=\"icon\" aria-hidden=\"true\">\n                        <use xlink:href=\"#icon-delete\"></use>\n                    </svg>\n                </div>\n            </div>   \n    </li>\n        ")).insertBefore($lastLi);
+    var $li = $("\n        <li>     \n            <div class=\"site\">\n                <div class=\"logo\">\n                 <img style=\"width:40px;\" src= ".concat(JSON.stringify("https://www." + simplify(node.url) + "/favicon.ico"), "> \n                </div>\n                <div class=\"link\">").concat(simplify(node.url), "</div>\n                <div class=\"close\">\n                    <svg class=\"icon\" aria-hidden=\"true\">\n                        <use xlink:href=\"#icon-delete\"></use>\n                    </svg>\n                </div>\n            </div>   \n    </li>\n        ")).insertBefore($lastLi);
     $li.on('click', function () {
       window.open(node.url);
     });
@@ -201,4 +201,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.b36e8d23.js.map
+//# sourceMappingURL=main.b093574b.js.map

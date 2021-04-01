@@ -28,7 +28,7 @@
         <li>     
             <div class="site">
                 <div class="logo">
-                ${node.logo}
+                 <img style="width:40px;" src= ${JSON.stringify("https://www." + simplify(node.url) + "/favicon.ico")}> 
                 </div>
                 <div class="link">${simplify(node.url)}</div>
                 <div class="close">
